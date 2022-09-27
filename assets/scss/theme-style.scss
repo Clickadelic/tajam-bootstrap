@@ -1,0 +1,47 @@
+body {
+
+}
+
+header {
+    background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
+    background-size: cover;
+    height: 75vh;
+}
+
+#tajam-navbar {
+    background-color: transparent;
+    .navbar-nav {
+        li.nav-item {
+            a.nav-link:link,
+            a.nav-link:visited {
+                font-weight: 500;
+                color: $white;
+            }
+        }
+    }
+}
+
+.hero {
+    h1 {
+        margin-top: 5rem;
+        color: $white;
+    }
+    p {
+        margin: 2rem auto;
+        max-width: 50%;
+        color: $white;
+    }
+}
+
+.wrap-video {
+    background: red url("../assets/images/backgrounds/bgk-middle.png") top center no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+.button-video {
+    background: none;
+    border: 0;
+    img {
+        margin: 0;
+    }
+}
