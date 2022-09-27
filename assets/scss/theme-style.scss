@@ -34,9 +34,9 @@ header {
 }
 
 .wrap-video {
-    background: red url("../assets/images/backgrounds/bgk-middle.png") top center no-repeat;
+    background: url("../images/backgrounds/bgk-middle.png") top center no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 550px;
 }
 .button-video {
     background: none;
@@ -44,4 +44,23 @@ header {
     img {
         margin: 0;
     }
+}
+
+.grid-expertise {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+}
+
+.grid-item {
+    align-self: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.brand-logo {
+    display: block;
+    width: 150px;
+    margin: 4rem auto;
 }
