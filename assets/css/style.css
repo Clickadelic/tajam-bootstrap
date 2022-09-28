@@ -10985,34 +10985,58 @@ header {
   border-bottom: 0;
 }
 
-.grid-item:nth-of-type(6) {
+.grid-item:last-of-type {
   border-bottom: 0;
   border-right: 0;
 }
 
-.grid-team {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+.wrap-team {
+  background: url("../images/backgrounds/bgk-middle.png") top center no-repeat;
+  background-size: cover;
+  padding: 4rem 0;
+}
+.wrap-team h3, .wrap-team .h3 {
+  color: #fff;
+}
+.wrap-team p {
+  color: #fff;
+  font-size: 0.85rem;
+}
+.wrap-team p.card-text {
+  color: #343a40;
+  font-size: 0.85rem;
 }
 
 .brand-logo {
   display: block;
-  width: 150px;
+  width: 120px;
   margin: 4rem auto;
 }
 
-footer {
-  background: url("../images/backgrounds/bgk-footer.png") top center no-repeat;
-  background-size: cover;
-  height: 270px;
-}
-footer h3, footer .h3 {
-  color: #fff;
+#visitor-text {
+  height: 180px;
 }
 
-#navbar-footer .navbar-nav .nav-item a {
+footer {
+  padding-top: 4rem;
+  background: url("../images/backgrounds/bgk-footer.png") top center no-repeat;
+  background-size: cover;
+  height: 370px;
+}
+footer .brand-logo-footer {
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  float: left;
+}
+footer h3, footer .h3 {
+  margin-top: 0.5rem;
   color: #fff;
+}
+footer a.footer-link:link,
+footer a.footer-link:visited {
+  color: #fff;
+  margin-right: 2rem;
+  text-decoration: none;
 }
 
 @media (min-width: 576px) {
