@@ -10941,15 +10941,18 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  margin-bottom: 4rem;
 }
 
 .grid-item {
   align-self: center;
   padding: 2rem;
   text-align: center;
+  border: 1px solid #ced4da;
 }
 .grid-item .grid-icon {
   margin-bottom: 2rem;
+  height: 50px;
 }
 .grid-item h3, .grid-item .h3 {
   font-size: 1rem;
@@ -10957,6 +10960,34 @@ header {
 }
 .grid-item p {
   margin: 0 2rem;
+}
+
+.grid-item:first-of-type {
+  border-top: 0;
+  border-left: 0;
+}
+
+.grid-item:nth-of-type(2) {
+  border-top: 0;
+}
+
+.grid-item:nth-of-type(3) {
+  border-top: 0;
+  border-right: 0;
+}
+
+.grid-item:nth-of-type(4) {
+  border-bottom: 0;
+  border-left: 0;
+}
+
+.grid-item:nth-of-type(5) {
+  border-bottom: 0;
+}
+
+.grid-item:nth-of-type(6) {
+  border-bottom: 0;
+  border-right: 0;
 }
 
 .grid-team {
