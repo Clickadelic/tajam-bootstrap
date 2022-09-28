@@ -1,11 +1,8 @@
-body {
-
-}
-
 header {
     background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
     background-size: cover;
     height: 75vh;
+    align-items: center;
 }
 
 #tajam-navbar {
@@ -21,15 +18,41 @@ header {
     }
 }
 
-.hero {
-    h1 {
-        margin-top: 5rem;
-        color: $white;
+.navbar-light {
+    .navbar-toggler-icon {
+        background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
-    p {
-        margin: 2rem auto;
-        max-width: 50%;
+    .navbar-toggler {
+        border: 0;
+    }
+}
+
+.navbar-toggler {
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.hamburger-bar {
+    background-color: $white;
+    width: 20px;
+    height: 2px;
+    margin-bottom: 4px;
+    display: block;
+}
+.hamburger-bar-bottom {
+    margin: 0;
+}
+
+.hero-inner {
+    // Flex or grid
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1, p {
         color: $white;
+
     }
 }
 
