@@ -52,4 +52,5 @@
 // scss-docs-end import-stack
 @import "theme-style.scss";
 
-@import "breakpoint-debug";
+// Uncomment the next line and recompile CSS to use the viewport debugger
+// @import "breakpoint-debug";

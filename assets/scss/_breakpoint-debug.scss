@@ -23,13 +23,6 @@ body:after {
         content: "MD";
         background-color:green;
     }
-    .wrap-logo-big {
-        .logo-big {
-            margin-top: 7rem;
-            margin-left: auto;
-            margin-right: 3rem;
-        }
-    }
 
 }
 @include media-breakpoint-up(lg) {
