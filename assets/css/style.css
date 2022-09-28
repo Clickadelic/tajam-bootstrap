@@ -10886,15 +10886,15 @@ header {
 .hero-inner h1, .hero-inner .h1 {
   margin-bottom: 0;
 }
-.hero-inner .mini-bar {
-  width: 60px;
-  height: 2px;
-  margin: 1rem 0;
-  background-color: #0dcaf0;
-}
 .hero-inner p {
   width: 60%;
   margin-bottom: 2rem;
+}
+
+.mini-bar {
+  width: 60px;
+  height: 2px;
+  margin: 1rem 0;
 }
 
 .wrap-logo-big {
@@ -11037,6 +11037,16 @@ footer a.footer-link:visited {
   color: #fff;
   margin-right: 2rem;
   text-decoration: none;
+}
+footer .list-address {
+  list-style: none;
+  color: #fff;
+}
+footer .list-address li:first-child {
+  list-style-image: url("../images/svg/");
+}
+footer .list-address li:last-child {
+  list-style-image: url("../images/png/facebook.png");
 }
 
 @media (min-width: 576px) {
