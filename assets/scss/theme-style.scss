@@ -9,6 +9,25 @@
     font-family: "Bitter";
 }
 
+body {
+    
+}
+
+// Debug help
+body:after {
+    content: "XS";
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 80px;
+    height: 80px;
+    background-color: $gray-200;
+    text-align: center;
+    padding-top: 1.8rem;
+    border-radius: 5px;
+    color: $black;
+}
+
 header {
     background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
     background-size: cover;
@@ -41,16 +60,70 @@ header {
         padding-bottom: 10px;
     }
 }
-.hamburger-bar {
-    background-color: $white;
-    width: 20px;
-    height: 2px;
-    margin-bottom: 4px;
-    display: block;
+
+.navbar-toggler {
+    padding: 0;
+    border: 0;
+    .ham {
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: transform 400ms;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  
+    .hamRotate.active {
+      transform: rotate(45deg);
+    }
+  
+    .line {
+      fill: none;
+      transition: stroke-dasharray 350ms, stroke-dashoffset 350ms;
+      stroke: $white;
+      stroke-width: 3.5;
+      stroke-linecap: square;
+    }
+  
+    .ham8 {
+      .top {
+        stroke-dasharray: 40 160;
+      }
+  
+      .middle {
+        stroke-dasharray: 40 142;
+        transform-origin: 50%;
+        transition: transform 400ms;
+      }
+  
+      .bottom {
+        stroke-dasharray: 40 85;
+        transform-origin: 50%;
+        transition: transform 400ms, stroke-dashoffset 400ms;
+      }
+    }
+  
+    .ham8.active {
+      .top {
+        stroke-dashoffset: -64px;
+      }
+  
+      .middle {
+        transform: rotate(90deg);
+      }
+  
+      .bottom {
+        stroke-dashoffset: -64px;
+      }
+    }
 }
-.hamburger-bar-bottom {
-    margin: 0;
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
 }
+
 .hero-inner {
     // Flex or grid
     display: flex;
@@ -66,7 +139,13 @@ header {
         margin-right: auto;
     }
     h1 {
-        margin-bottom: 2rem;
+       margin-bottom: 0;
+    }
+    .mini-bar {
+        width: 60px;
+        height: 2px;
+        margin: 1rem 0;
+        background-color: $primary;
     }
     p {
         width: 60%;
@@ -74,9 +153,18 @@ header {
     }
 }
 
-.logo-big {
-    margin-left: auto;
-    width: 200px;
+.wrap-logo-big {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .logo-big {
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 160px;
+        height: 160px;
+    }
 }
 
 .wrap-video {
@@ -96,6 +184,17 @@ header {
     }
 }
 
+// Rewrite me
+.wrap-expertise {
+    .mini-bar {
+        background-color: $gray-400;
+        height: 2px;
+        width: 60px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
 .grid-expertise {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -107,6 +206,23 @@ header {
     align-self: center;
     padding: 2rem;
     text-align: center;
+    .grid-icon {
+        margin-bottom: 2rem;
+    }
+    h3 {
+        font-size: 1rem;
+        color: $gray-800;
+    }
+    p {
+        margin: 0 2rem;
+    }
+}
+
+
+.grid-team {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
 }
 
 .brand-logo {
@@ -131,5 +247,43 @@ footer {
                 color: $white;
             }
         }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    body:after {
+        content: "SM";
+        background-color: red;
+    }
+}
+@include media-breakpoint-up(md) {
+    body:after {
+        content: "MD";
+        background-color:green;
+    }
+    .wrap-logo-big {
+        .logo-big {
+            margin-top: 7rem;
+            margin-left: auto;
+            margin-right: 3rem;
+        }
+    }
+}
+@include media-breakpoint-up(lg) {
+    body:after {
+        content: "LG";
+        background-color: blue;
+    }
+}
+@include media-breakpoint-up(xl) {
+    body:after {
+        content: "XL";
+        background-color: yellow;
+    }
+}
+@include media-breakpoint-up(xxl) {
+    body:after {
+        content: "XXL";
+        background-color: purple;
     }
 }
