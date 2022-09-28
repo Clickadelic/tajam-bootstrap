@@ -1,0 +1,52 @@
+// Debug help
+body:after {
+    content: "XS";
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 80px;
+    height: 80px;
+    background-color: $gray-200;
+    text-align: center;
+    padding-top: 1.8rem;
+    border-radius: 5px;
+    color: $black;
+}
+@include media-breakpoint-up(sm) {
+    body:after {
+        content: "SM";
+        background-color: red;
+    }
+}
+@include media-breakpoint-up(md) {
+    body:after {
+        content: "MD";
+        background-color:green;
+    }
+    .wrap-logo-big {
+        .logo-big {
+            margin-top: 7rem;
+            margin-left: auto;
+            margin-right: 3rem;
+        }
+    }
+
+}
+@include media-breakpoint-up(lg) {
+    body:after {
+        content: "LG";
+        background-color: blue;
+    }
+}
+@include media-breakpoint-up(xl) {
+    body:after {
+        content: "XL";
+        background-color: yellow;
+    }
+}
+@include media-breakpoint-up(xxl) {
+    body:after {
+        content: "XXL";
+        background-color: purple;
+    }
+}

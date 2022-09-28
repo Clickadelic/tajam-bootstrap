@@ -1,3 +1,6 @@
+// Mobile Viewport
+
+// Import Bitter font
 @font-face {
     font-family: "Bitter";
     font-style: normal;
@@ -5,31 +8,20 @@
     src: url("../fonts/Bitter/static/Bitter-Regular.ttf") format("ttf");
 }
 
+// Create utility class to use later in html
 .bitter {
     font-family: "Bitter";
 }
 
-// Debug help
-body:after {
-    content: "XS";
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    width: 80px;
-    height: 80px;
-    background-color: $gray-200;
-    text-align: center;
-    padding-top: 1.8rem;
-    border-radius: 5px;
-    color: $black;
-}
-
+// Header
 header {
     background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
     background-size: cover;
     height: 75vh;
     align-items: center;
 }
+
+// Main Navbar
 #tajam-navbar {
     background-color: transparent;
     .navbar-nav {
@@ -46,6 +38,7 @@ header {
         }
     }
 }
+
 .navbar {
     .navbar-toggler-icon {
         background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -120,6 +113,7 @@ header {
     box-shadow: none;
 }
 
+// Hero Image
 .hero-inner {
     // Flex or grid
     display: flex;
@@ -291,6 +285,13 @@ footer {
         margin-right: 2rem;
         text-decoration: none;
     }
+    a.footer-link:hover,
+    a.footer-link:focus {
+        color: $gray-800;
+    }
+    a.footer-link:last-of-type {
+        margin-right: 0;
+    }
     .list-address {
         list-style: none;
         color: $white;
@@ -303,17 +304,13 @@ footer {
     }
 }
 
+// Medium sized mobile phones
 @include media-breakpoint-up(sm) {
-    body:after {
-        content: "SM";
-        background-color: red;
-    }
+
 }
+
+// Tablets
 @include media-breakpoint-up(md) {
-    body:after {
-        content: "MD";
-        background-color:green;
-    }
     .wrap-logo-big {
         .logo-big {
             margin-top: 7rem;
@@ -321,23 +318,19 @@ footer {
             margin-right: 3rem;
         }
     }
+}
+
+// Laptops
+@include media-breakpoint-up(lg) {
 
 }
-@include media-breakpoint-up(lg) {
-    body:after {
-        content: "LG";
-        background-color: blue;
-    }
-}
+
+// Desktop Normal
 @include media-breakpoint-up(xl) {
-    body:after {
-        content: "XL";
-        background-color: yellow;
-    }
+
 }
+
+// Desktop Big Screen
 @include media-breakpoint-up(xxl) {
-    body:after {
-        content: "XXL";
-        background-color: purple;
-    }
+
 }

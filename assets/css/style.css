@@ -10775,20 +10775,6 @@ textarea.form-control-lg {
   font-family: "Bitter";
 }
 
-body:after {
-  content: "XS";
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  width: 80px;
-  height: 80px;
-  background-color: #e9ecef;
-  text-align: center;
-  padding-top: 1.8rem;
-  border-radius: 5px;
-  color: #000;
-}
-
 header {
   background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
   background-size: cover;
@@ -11038,6 +11024,13 @@ footer a.footer-link:visited {
   margin-right: 2rem;
   text-decoration: none;
 }
+footer a.footer-link:hover,
+footer a.footer-link:focus {
+  color: #343a40;
+}
+footer a.footer-link:last-of-type {
+  margin-right: 0;
+}
 footer .list-address {
   list-style: none;
   color: #fff;
@@ -11047,6 +11040,27 @@ footer .list-address li:first-child {
 }
 footer .list-address li:last-child {
   list-style-image: url("../images/png/facebook.png");
+}
+
+@media (min-width: 768px) {
+  .wrap-logo-big .logo-big {
+    margin-top: 7rem;
+    margin-left: auto;
+    margin-right: 3rem;
+  }
+}
+body:after {
+  content: "XS";
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 80px;
+  height: 80px;
+  background-color: #e9ecef;
+  text-align: center;
+  padding-top: 1.8rem;
+  border-radius: 5px;
+  color: #000;
 }
 
 @media (min-width: 576px) {
