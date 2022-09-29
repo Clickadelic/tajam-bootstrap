@@ -1,0 +1,26 @@
+{
+  "name": "tajam-bootstrap",
+  "version": "0.0.1",
+  "description": "A Boostrapped version of Tajam PSD2HTML",
+  "main": "index.js",
+  "scripts": {
+    "build-bootstrap": "sass assets/scss/style.scss assets/css/style.css --watch --no-source-map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clickadelic/tajam-bootstrap.git"
+  },
+  "author": "Tobias Hopp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clickadelic/tajam-bootstrap/issues"
+  },
+  "homepage": "https://github.com/Clickadelic/tajam-bootstrap#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.1"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
