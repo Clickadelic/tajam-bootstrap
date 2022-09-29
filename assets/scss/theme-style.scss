@@ -39,6 +39,10 @@ header {
     }
 }
 
+.navbar-brand-img {
+    margin-right: 20px;
+}
+
 .navbar {
     .navbar-toggler-icon {
         background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -272,11 +276,11 @@ footer {
     height: 370px;
     .brand-logo-footer {
         margin-right: 1rem;
-        margin-bottom: 2rem;
         float: left;
     }
     h3 {
         margin-top: .5rem;
+        margin-bottom: 2rem;
         color: $white;
     }
     a.footer-link:link,
@@ -295,11 +299,14 @@ footer {
     .list-address {
         list-style: none;
         color: $white;
+        li {
+            margin-bottom: 0.25rem;
+        }
         li:first-child {
-            list-style-image: url("../images/svg/");
+            list-style-image: url("../images/png/big104.png");
         }
         li:last-child {
-            list-style-image: url("../images/png/facebook.png");
+            list-style-image: url("../images/png/phone351.png");
         }
     }
 }
@@ -316,6 +323,11 @@ footer {
             margin-top: 7rem;
             margin-left: auto;
             margin-right: 3rem;
+        }
+    }
+    footer {
+        .list-address {
+            margin-left: 30px;
         }
     }
 }
