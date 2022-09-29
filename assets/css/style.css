@@ -10929,7 +10929,7 @@ header {
 
 .grid-expertise {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   margin-bottom: 4rem;
 }
@@ -11050,6 +11050,9 @@ footer .list-address li:last-child {
 }
 
 @media (min-width: 768px) {
+  .grid-expertise {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .wrap-logo-big .logo-big {
     margin-top: 7rem;
     margin-left: auto;
