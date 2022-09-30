@@ -8,6 +8,11 @@
     src: url("../fonts/Bitter/static/Bitter-Regular.ttf") format("ttf");
 }
 
+body {
+    background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
+    background-size: contain;
+}
+
 // Create utility class to use later in html
 .bitter {
     font-family: "Bitter";
@@ -15,16 +20,6 @@
 
 .navbar {
     z-index: 1;
-}
-
-// Header
-.wrap-hero {
-    position: relative;
-    top: -100px;
-    background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
-    background-size: cover;
-    padding: 5rem 0;
-    min-height: 500px;
 }
 
 // Main Navbar
@@ -123,6 +118,12 @@
     box-shadow: none;
 }
 
+// Hero Scene
+.wrap-hero {
+    padding: 5rem 0;
+    min-height: 500px;
+}
+
 // Hero Image
 .hero-inner {
     // Flex or grid
@@ -200,21 +201,19 @@
 
 .grid-expertise {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     margin-bottom: 4rem;
 }
-
 .grid-item {
     align-self: center;
     padding: 1rem;
     text-align: center;
     border: 1px solid $gray-400;
-    
     .grid-icon {
         margin-bottom: 2rem;
-        height: 60px;
+        height: 40px;
+        width: auto;
     }
     h3 {
         font-size: 1rem;
@@ -231,16 +230,19 @@
 }
 .grid-item:nth-of-type(2) {
     border-top: 0;
+    border-right: 0;
 }
 .grid-item:nth-of-type(3) {
-    border-top: 0;
+
+    border-left: 0;
 }
 .grid-item:nth-of-type(4) {
-    border-bottom: 0;
-    border-left: 0;
+
+    border-right: 0;
 }
 .grid-item:nth-of-type(5) {
     border-bottom: 0;
+    border-left: 0;
 }
 .grid-item:last-of-type {
     border-bottom: 0;
@@ -261,6 +263,9 @@
     p.card-text {
         color: $gray-800;
         font-size: 0.85rem;
+    }
+    .card-img-top {
+        height: auto;
     }
 }
 
@@ -316,6 +321,11 @@ footer {
     }
 }
 
+.wrap-footer-content {
+    display: flex;
+    justify-content: center;
+}
+
 // Medium sized mobile phones
 @include media-breakpoint-up(sm) {
 
@@ -323,26 +333,35 @@ footer {
 
 // Tablets
 @include media-breakpoint-up(md) {
+    .grid-expertise {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 4rem;
+    }
+    .grid-item {
+        padding: 3rem;
 
+    }
     .grid-item:first-of-type {
         border-top: 0;
         border-left: 0;
+
     }
     .grid-item:nth-of-type(2) {
-        border-top: 0;
-        // border-left: 0;
-        // border-right: 0;
+        border-right: 1px solid $gray-400;
     }
     .grid-item:nth-of-type(3) {
         border-top: 0;
         border-right: 0;
+        border-left: 1px solid $gray-400;
     }
     .grid-item:nth-of-type(4) {
         border-bottom: 0;
         border-left: 0;
+        border-right: 1px solid $gray-400;
     }
     .grid-item:nth-of-type(5) {
         border-bottom: 0;
+        border-left: 1px solid $gray-400;
     }
     .grid-item:last-of-type {
         border-bottom: 0;
@@ -359,6 +378,10 @@ footer {
 
     footer {
         height: 400px;
+    }
+
+    .wrap-footer-content {
+        justify-content: space-between;
     }
 }
 
