@@ -10773,7 +10773,6 @@ textarea.form-control-lg {
 }
 body {
   background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
-  background-size: contain;
 }
 
 .bitter {
@@ -10938,9 +10937,10 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  grid-auto-rows: 1fr;
+  align-content: stretch;
   margin-bottom: 4rem;
   background-color: #ced4da;
+  grid-auto-rows: 1fr;
   gap: 1px;
 }
 

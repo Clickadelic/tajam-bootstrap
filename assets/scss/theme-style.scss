@@ -10,7 +10,7 @@
 
 body {
     background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
-    background-size: contain;
+    // background-size: contain;
 }
 
 // Create utility class to use later in html
@@ -203,15 +203,18 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    grid-auto-rows: 1fr;
+    align-content: stretch;
     margin-bottom: 4rem;
+    // The Grid Trick,
     background-color: $gray-400;
+    grid-auto-rows: 1fr;
     gap: 1px;
 }
 .grid-item {
     align-self: center;
     padding: 1rem;
     text-align: center;
+    // overwrite gray-400 background to white again to fake the cells
     background-color: $white;
     height: 100%;
     .grid-icon {
@@ -228,6 +231,7 @@ body {
         margin: 0 2rem;
     }
 }
+// Ugly Method
 // .grid-item:first-of-type {
 //     border-top: 0;
 //     border-left: 0;
@@ -338,6 +342,9 @@ footer {
 
 // Tablets
 @include media-breakpoint-up(md) {
+    // body {
+    //     background-size: cover;
+    // }
     .grid-expertise {
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 4rem;
@@ -346,6 +353,7 @@ footer {
         padding: 3rem;
 
     }
+    // Ugly Method
     // .grid-item:first-of-type {
     //     border-top: 0;
     //     border-left: 0;
