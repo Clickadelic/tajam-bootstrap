@@ -10771,16 +10771,12 @@ textarea.form-control-lg {
   font-weight: 400;
   src: url("../fonts/Bitter/static/Bitter-Regular.ttf") format("ttf");
 }
-body {
-  background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
-}
-
 .bitter {
   font-family: "Bitter";
 }
 
 .navbar {
-  z-index: 1;
+  background: #33325A;
 }
 
 #tajam-navbar {
@@ -10861,6 +10857,8 @@ body {
 }
 
 .wrap-hero {
+  background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
+  background-size: cover;
   padding: 5rem 0;
   min-height: 500px;
 }

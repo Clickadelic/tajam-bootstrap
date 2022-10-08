@@ -9,8 +9,7 @@
 }
 
 body {
-    background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
-    // background-size: contain;
+    
 }
 
 // Create utility class to use later in html
@@ -19,7 +18,7 @@ body {
 }
 
 .navbar {
-    z-index: 1;
+    background: #33325A;
 }
 
 // Main Navbar
@@ -120,6 +119,8 @@ body {
 
 // Hero Scene
 .wrap-hero {
+    background: url("../images/backgrounds/bgk-header.png") top center no-repeat;
+    background-size: cover;
     padding: 5rem 0;
     min-height: 500px;
 }
